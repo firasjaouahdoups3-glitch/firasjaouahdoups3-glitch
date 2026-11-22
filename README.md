@@ -20,9 +20,11 @@ Projet de groupe pour le SDIS du Bas-Rhin : où concentrer les moyens contre les
 → [feux-de-foret-grand-est](https://github.com/lawsonboevirobert-boop/feux-de-foret-grand-est)
 
 Ma part :
-- le nettoyage et la consolidation des données : 7 sources (feux, météo des forêts, satellite NASA FIRMS, calendrier…) en tables propres, avec des règles de qualité testées
-- la fiche source NASA FIRMS et un indicateur sur la concentration des départs de feu
-- les relectures de code de l'équipe
+- **tout le nettoyage des données** : 9 sources (feux de forêt BDIFF, Météo des forêts, satellite NASA FIRMS, indice météo du feu Copernicus, BD Forêt, interventions des pompiers, calendrier…) transformées en tables propres, avec une barrière de qualité qui arrête le pipeline si une donnée est fausse (105 tests)
+- l'indice de danger de feu calculé par département, pondéré par la surface de forêt
+- un indicateur pour savoir où placer les moyens : 27 % des départs de feu dans 10 communes qui couvrent 8,3 % du département
+- l'assemblage du jeu d'indicateurs de l'équipe (12 indicateurs) et des objectifs retenus
+- les relectures de code de l'équipe, en relançant le code et en recalculant les chiffres
 
 ### Optimisation opérationnelle d'une chaîne GC-MS (HETIC, 2026, projet de groupe, dépôt privé)
 Dosage de 16 polluants (HAP) dans des terres agricoles : calcul des temps de rétention et des ratios d'ions à partir des fichiers bruts de l'appareil.
